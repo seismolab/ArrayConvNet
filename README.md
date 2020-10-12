@@ -7,7 +7,7 @@ This study is based on the earthquake information and waveform data from the Haw
 Special thanks to researchers and staff at HVO for collecting the seismic data and providing the earthquake catalog used in this study and Quoqing Lin for providing the relocated earthquakes that are used to assess the effects of location accuracy in the training data set.
 
 ## Preprocessing the data
-To process the raw trace data, we use two scripts:
+To process the public raw trace data, we use two scripts:
 1. `generate_detect_data_3cRand.py`
 2. `generate_event_array3c4d.py`
 
@@ -22,7 +22,7 @@ Once all data is processed, we train and test the detection and localization mod
 For ease of use, we've included the trained detection and localization models. The directory `models` contains:
 
 - `SeisConvNetDetect_sortedAbs50s.pth`: trained model for detection
-- `SeisConvNetLoc_NotAbs2017Mcut50s.pth`: trained model for 4d localization
+- `SeisConvNetLoc_NotAbs2017Mcut50s.pth`: trained model for 4d (latitude, longitude, depth, and time) localization
 
 Together, they create ArrayConvNet.
 

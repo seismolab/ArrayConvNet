@@ -46,7 +46,7 @@ class Net(nn.Module):
         x = self.fc2(x)
         return x
 
-
+ 
 #========Training the model =====================================
 # ds_train is the training dataset loader
 # ds_test is the testing dataset loader

@@ -115,7 +115,7 @@ def read_sac(path):
 				event_array[j,i,:] = torch.from_numpy(tr.data)
 			ii +=1
 	return event_array
-
+ 
 #========Return all days with seismic traces=====================================
 # Each directory corresponds to a day     
 def find_all_days(path):
