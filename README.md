@@ -6,15 +6,15 @@ All raw data files are located at [here](https://duckduckgo.com). Special thanks
 
 ## Preprocessing the data
 To process the raw trace data, we use two scripts:
-1. 'generate_detect_data_3cRand.py'
-2. 'generate_event_array3c4d.py'
+1. `generate_detect_data_3cRand.py`
+2. `generate_event_array3c4d.py`
 
 The first script processes all detection data given earthquake and noise events. It creates the files for the training and test data for training the detection model.
 
 Similarly, the second script processes all earthquake event data and their labels. It creates the files for the training and test data for training the localization model.   
 
 ## Training the models
-Once all data is processed, we train and test the detection and localization model with the scripts 'detect_3c.py' and 'predict_location3c4d.py', respectively. The output of these scripts are the trained models with their accuracies on test datasets. The models for [detection](SeisConvNetDetect_sortedAbs50s.pth) and [localization](SeisConvNetLoc_NotAbs2017Mcut50s.pth) are located within this repo.
+Once all data is processed, we train and test the detection and localization model with the scripts `detect_3c.py` and `predict_location3c4d.py`, respectively. The output of these scripts are the trained models with their accuracies on test datasets. The models for [detection](SeisConvNetDetect_sortedAbs50s.pth) and [localization](SeisConvNetLoc_NotAbs2017Mcut50s.pth) are located within this repo.
 
 ## Validation on continuous data
-Earthquake catalogs usually represent only a subset of earthquakes that occurred, with detection and localization limited by signal-to-noise ratios in seismic records, number of detected stations, and other factors. Our training data from the USGS catalog for Hawaii is no exception. So while our ArrayConvNet performs well for the validation data set, we tested further on continuous data to evaluate its true efficacy. In 'validate_consecution.py', we pass in continous seismic readings and evaluate the results.
+Earthquake catalogs usually represent only a subset of earthquakes that occurred, with detection and localization limited by signal-to-noise ratios in seismic records, number of detected stations, and other factors. Our training data from the USGS catalog for Hawaii is no exception. So while our ArrayConvNet performs well for the validation data set, we tested further on continuous data to evaluate its true efficacy. In `validate_consecution.py`, we pass in continous seismic readings and evaluate the results.
