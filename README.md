@@ -27,4 +27,4 @@ For ease of use, we've included the trained detection and localization models. T
 Together, they create ArrayConvNet.
 
 ## Validation on continuous data
-Earthquake catalogs usually represent only a subset of earthquakes that occurred, with detection and localization limited by signal-to-noise ratios in seismic records, number of detected stations, and other factors. Our training data from the USGS catalog for Hawaii is no exception. So while our ArrayConvNet performs well for the validation data set, we tested further on continuous data to evaluate its true efficacy. In `validate_consecution.py`, we pass in continous seismic readings and evaluate the results.
+Earthquake catalogs usually represent only a subset of earthquakes that occurred, with detection and localization limited by signal-to-noise ratios in seismic records, number of detected stations, and other factors. Our training data from the USGS catalog for Hawaii is no exception. So while our ArrayConvNet performs well for the test data set, we evaluate its true efficacy on continuous data. In `validate_consecution.py`, we pass in continuous seismic readings and evaluate the results.
