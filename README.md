@@ -19,7 +19,7 @@ Similarly, the second script processes all earthquake event data and their label
 Once all data is processed, we train and test the detection and localization model with the scripts `detect_3c.py` and `predict_location3c4d.py`, respectively. The output of these scripts are the trained models with their accuracies on test datasets. 
 
 ### Trained models
-For ease of use, we've included trained detection and localization models. The directory `models` contains:
+For ease of use, we've included the trained detection and localization models. The directory `models` contains:
 
 - `SeisConvNetDetect_sortedAbs50s.pth`: trained model for detection
 - `SeisConvNetLoc_NotAbs2017Mcut50s.pth`: trained model for 4d localization
