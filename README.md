@@ -2,7 +2,9 @@
 Using convolutional neural networks (CNNs), we propose a new technique for automatic earthquake detection and 4D localization. This repository contains the code and trained models to write our paper. The full insights and report should be referenced at our paper submission. 
 
 ## Data
-All raw data files are located at [here](https://duckduckgo.com). Special thanks to researchers and staff at HVO for collecting the seismic data and providing the earthquake catalog used in this study and Quoqing Lin for providing the relocated earthquakes that are used to assess the effects of location accuracy in the training data set.
+This study is based on the earthquake information and waveform data from the Hawaiian Volcano Observatory (HVO), run by the USGS. The USGS earthquake catalog is obtained from the [USGS](https://earthquake.usgs.gov/earthquakes/search/), last accessed March 23, 2020.  The waveform data is available from the IRIS DMC.
+
+Special thanks to researchers and staff at HVO for collecting the seismic data and providing the earthquake catalog used in this study and Quoqing Lin for providing the relocated earthquakes that are used to assess the effects of location accuracy in the training data set.
 
 ## Preprocessing the data
 To process the raw trace data, we use two scripts:
@@ -22,7 +24,7 @@ For ease of use, we've included trained detection and localization models. The d
 - `SeisConvNetDetect_sortedAbs50s.pth`: trained model for detection
 - `SeisConvNetLoc_NotAbs2017Mcut50s.pth`: trained model for 4d localization
 
-Together, they create ArrayConvNet
+Together, they create ArrayConvNet.
 
 ## Validation on continuous data
 Earthquake catalogs usually represent only a subset of earthquakes that occurred, with detection and localization limited by signal-to-noise ratios in seismic records, number of detected stations, and other factors. Our training data from the USGS catalog for Hawaii is no exception. So while our ArrayConvNet performs well for the validation data set, we tested further on continuous data to evaluate its true efficacy. In `validate_consecution.py`, we pass in continous seismic readings and evaluate the results.
