@@ -1,6 +1,8 @@
 # ArrayConvNet
 Using convolutional neural networks (CNNs), we propose a new technique for automatic earthquake detection and 4D localization. This repository contains the code and trained models to write our paper. The full insights and report should be referenced at our paper submission. 
 
+How to cite this work: Heather Shen, and Yang Shen (2020). Array-based convolutional neural networks for automatic earthquake detection and 4D localization, Preprint on https://essoar.org (2020) doi:10.1002/essoar.10504553.1
+
 ## Data
 This study is based on the earthquake information and waveform data from the Hawaiian Volcano Observatory (HVO), run by the USGS. The USGS earthquake catalog is obtained from the [USGS](https://earthquake.usgs.gov/earthquakes/search/), last accessed March 23, 2020.  The waveform data is available from the IRIS DMC.
 
